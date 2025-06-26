@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import styles from "./Header.module.css";
+import styles from "./header.module.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
