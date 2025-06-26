@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useRef, useEffect } from 'react';
-import styles from './Header.module.css';
+import { useState, useRef, useEffect } from "react";
+import styles from "./Header.module.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,40 +15,42 @@ export default function Header() {
         setIsOpen(false);
       }
     }
-    document.addEventListener('mousedown', handleClick);
-    return () => document.removeEventListener('mousedown', handleClick);
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
   }, [isOpen]);
 
   // Prevent scrolling when menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [isOpen]);
 
   // Anchor links for single page navigation
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#profile', label: 'Profile' },
-    { href: '#skill', label: 'Skill' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#strengths', label: 'Strengths' },
-    { href: '#contact', label: 'Contact' },
+    { href: "#home", label: "Home" },
+    { href: "#profile", label: "Profile" },
+    { href: "#skill", label: "Skill" },
+    { href: "#projects", label: "Projects" },
+    { href: "#strengths", label: "Strengths" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
     <header className={styles.header}>
       {/* Backdrop for mobile menu */}
-      {isOpen && <div className={styles.backdrop} onClick={() => setIsOpen(false)} />}
+      {isOpen && (
+        <div className={styles.backdrop} onClick={() => setIsOpen(false)} />
+      )}
       <nav className={styles.navbar} aria-label="Main Navigation">
         <div className={styles.topRow}>
           <a href="#home" className={styles.siteTitle}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: "flex", alignItems: "center" }}>
               <span className={styles.logo}>Portfolio</span>
             </div>
           </a>
@@ -65,8 +67,8 @@ export default function Header() {
 
         <ul
           ref={menuRef}
-          className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}
-          style={{ transition: 'transform 0.3s cubic-bezier(.4,0,.2,1)' }}
+          className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}
+          style={{ transition: "transform 0.3s cubic-bezier(.4,0,.2,1)" }}
         >
           {navLinks.map(({ href, label }) => (
             <li key={href}>
