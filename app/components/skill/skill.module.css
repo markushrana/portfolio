@@ -1,0 +1,85 @@
+/* Skill section styles for single-page import */
+.section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #555;
+}
+.skillCategory {
+  margin-bottom: 48px;
+}
+.subHeading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #0070f3;
+  padding-bottom: 8px;
+  color: #0070f3;
+}
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(120deg, #f0f4ff 60%, #e0e7ff 100%);
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 112, 243, 0.09);
+  padding: 1.5rem 1.2rem;
+  border: 1.5px solid #c3dafe;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+  min-width: 140px;
+  min-height: 180px;
+  margin-bottom: 12px;
+}
+.skillItem:hover {
+  box-shadow: 0 8px 32px rgba(0, 112, 243, 0.18);
+  border: 1.5px solid #0070f3;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f0f4ff 100%);
+}
+.skillImage {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 112, 243, 0.08);
+  margin-bottom: 0.8rem;
+}
+.skillName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0070f3;
+  text-align: center;
+  margin-top: 0.2rem;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", "Inter", "Segoe UI", Arial, sans-serif;
+}
+.skillsList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  font-size: 18px;
+}

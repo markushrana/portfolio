@@ -1,30 +1,43 @@
-import Link from "next/link";
-import styles from "./page.module.css";
+import React from "react";
 
-export default function WorkPage() {
-  return (
-    <main className={styles.container}>
-      <h2 className={styles.heading}>Work</h2>
-      <p className={styles.text}>
-        ここでは自分がこれまで制作してきたアプリやサイトを紹介します。各作品のサムネイルや簡単な説明文、GitHub リンクを載せましょう。
-      </p>
-      <ul className={styles.workList}>
-        <li className={styles.workItem}>
-          <h3>作品名 1</h3>
-          <p>Next.js を使ったポートフォリオサイト</p>
-          <Link href="https://github.com/username/project1" className={styles.link}>
-            GitHub リポジトリはこちら
-          </Link>
-        </li>
-        <li className={styles.workItem}>
-          <h3>作品名 2</h3>
-          <p>React + Firebase で作った TODO アプリ</p>
-          <Link href="https://github.com/username/project2" className={styles.link}>
-            GitHub リポジトリはこちら
-          </Link>
-        </li>
-        {/* 必要に応じてリストを追加 */}
-      </ul>
-    </main>
-  );
-}
+const WorkPage = () => (
+  <section id="work">
+    <h2>My Work</h2>
+    <p>
+      Here is a project I built and deployed on Vercel. You can view it live or
+      explore the code:
+    </p>
+    <div style={{ margin: "1.5rem 0" }}>
+      <a
+        href="https://htmlcss-portfolio.markushranas-projects.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ fontWeight: "bold", color: "#0070f3" }}
+      >
+        Visit HTML/CSS Portfolio (Vercel)
+      </a>
+    </div>
+    <div
+      style={{
+        border: "1px solid #e3eafc",
+        borderRadius: "12px",
+        overflow: "hidden",
+        boxShadow: "0 2px 12px rgba(0,0,0,0.07)",
+        maxWidth: "100%",
+        height: "500px",
+        margin: "auto",
+      }}
+    >
+      <iframe
+        src="https://htmlcss-portfolio.markushranas-projects.vercel.app/"
+        title="HTML/CSS Portfolio Demo"
+        width="100%"
+        height="100%"
+        style={{ border: "none", minHeight: "500px", width: "100%" }}
+        allowFullScreen
+      />
+    </div>
+  </section>
+);
+
+export default WorkPage;

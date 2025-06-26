@@ -1,0 +1,142 @@
+.header {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.siteTitle {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.siteTitle:hover {
+  color: #0070f3;
+}
+
+.menuToggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Nav links */
+.navLinks {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* ✅ center horizontally */
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 0 auto; /* ✅ center container */
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Active link */
+.navLinks li a.active {
+  color: #0070f3;
+  border-bottom: 2px solid #0070f3;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    align-items: center; /* ✅ center mobile links */
+    width: 100%;
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLinks li {
+    width: 100%;
+    text-align: center; /* ✅ center text inside link */
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    animation: fadeIn 0.3s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .navLinks {
+    transform: translateY(-30px) scale(0.98);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s;
+  }
+  .navLinks.open {
+    display: flex;
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 28px;
+  color: #0070f3;
+  margin-right: 8px;
+}

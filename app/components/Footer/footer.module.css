@@ -1,0 +1,102 @@
+.footer {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center; /* Center the entire footer container */
+}
+
+.footerContainer {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all child content */
+  text-align: center;
+  gap: 2rem;
+}
+
+.copyRight {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footerNav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footerNav li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerNav li a:hover {
+  color: #0070f3;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.socialIcons a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #0070f3;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.newsletterInput {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.newsletterButton {
+  padding: 0.5rem 1.25rem;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletterButton:hover {
+  background-color: #005bb5;
+}
+
+@media (max-width: 600px) {
+  .footerContainer {
+    padding: 0 0.5rem;
+  }
+  .footerNav {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+  }
+  .socialIcons {
+    justify-content: center;
+  }
+}
