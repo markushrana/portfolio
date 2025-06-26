@@ -46,7 +46,7 @@ export default function Footer() {
 
         <div className={styles.socialIcons} aria-label="Social media links">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/markushrana"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -80,7 +80,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://twitter.com/yourusername"
+            href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
@@ -97,7 +97,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://instagram.com/yourusername"
+            href="https://instagram.com/markushrana"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -113,7 +113,7 @@ export default function Footer() {
             </svg>
           </a>
 
-          <a href="mailto:your.email@example.com" aria-label="Email">
+          <a href="ranamarkush@gmail.com" aria-label="Email">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

@@ -74,31 +74,56 @@
 @media (max-width: 768px) {
   .menuToggle {
     display: block;
+    z-index: 1001;
   }
 
   .navLinks {
     display: none;
     flex-direction: column;
-    align-items: center; /* ✅ center mobile links */
-    width: 100%;
-    margin-top: 16px;
-    gap: 16px;
+    align-items: center;
+    width: 100vw;
+    margin-top: 0;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.98);
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    padding: 32px 0 24px 0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 18px 18px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
   }
 
   .navLinks.open {
     display: flex;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .navLinks li {
     width: 100%;
-    text-align: center; /* ✅ center text inside link */
+    text-align: center;
   }
-
+  .navLinks li a {
+    font-size: 1.2rem;
+    padding: 16px 0;
+    display: block;
+    width: 100vw;
+    color: #0070f3;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .navLinks li a:hover,
+  .navLinks li a:focus {
+    background: #e0e7ff;
+    color: #005fcc;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .backdrop {
     position: fixed;
     top: 0;
