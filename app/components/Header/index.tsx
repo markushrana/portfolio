@@ -7,7 +7,6 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLUListElement>(null);
 
-  // Close menu when clicking outside
   useEffect(() => {
     if (!isOpen) return;
     function handleClick(e: MouseEvent) {
@@ -19,7 +18,6 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [isOpen]);
 
-  // Prevent scrolling when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
