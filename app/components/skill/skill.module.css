@@ -4,20 +4,21 @@
   margin: 40px auto;
   padding: 0 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: #111;
 }
 .heading {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 16px;
   text-align: center;
+  color: #111 !important;
 }
 .text {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 40px;
   text-align: center;
-  color: #555;
+  color: #111 !important;
 }
 .skillCategory {
   margin-bottom: 48px;
@@ -28,7 +29,7 @@
   margin-bottom: 24px;
   border-bottom: 2px solid #0070f3;
   padding-bottom: 8px;
-  color: #0070f3;
+  color: #111 !important;
 }
 .skillsContainer {
   display: flex;
@@ -68,7 +69,7 @@
 .skillName {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #0070f3;
+  color: #111 !important;
   text-align: center;
   margin-top: 0.2rem;
   letter-spacing: 0.5px;

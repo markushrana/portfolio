@@ -1,6 +1,6 @@
 .header {
-  background-color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(120deg, #b3e0ff 0%, #e0f7fa 100%);
+  box-shadow: 0 2px 6px rgba(0, 112, 243, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -28,7 +28,7 @@
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #005fcc;
   transition: color 0.3s ease;
 }
 
@@ -39,10 +39,20 @@
 .menuToggle {
   display: none;
   font-size: 28px;
-  background: none;
-  border: none;
+  background: #b3e0ff;
+  border: 2px solid #009eea;
+  border-radius: 8px;
   cursor: pointer;
-  color: #333;
+  color: #005fcc;
+  padding: 4px 16px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.menuToggle:hover,
+.menuToggle:focus {
+  background: #e0f7fa;
+  color: #0070f3;
+  border-color: #0070f3;
 }
 
 /* Nav links */
@@ -59,15 +69,19 @@
 
 .navLinks li a {
   text-decoration: none;
-  color: #555;
+  color: #23272f; /* Changed to dark grey */
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px 14px;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: background 0.2s, color 0.2s;
 }
 
 /* Active link */
 .navLinks li a.active {
   color: #0070f3;
   border-bottom: 2px solid #0070f3;
+  background: #e0f7fa;
 }
 
 /* MOBILE STYLES */
@@ -119,8 +133,8 @@
   }
   .navLinks li a:hover,
   .navLinks li a:focus {
-    background: #e0e7ff;
-    color: #005fcc;
+    background: #e0f7fa;
+    color: #0070f3;
   }
   .navbar {
     flex-direction: column;
@@ -163,6 +177,19 @@
 .logo {
   font-weight: 900;
   font-size: 28px;
-  color: #0070f3;
+  color: #23272f;
   margin-right: 8px;
+  transition: color 0.2s;
+}
+.logo:hover {
+  color: #0070f3;
+}
+
+.navLinks li a:hover,
+.navLinks li a:focus {
+  background: linear-gradient(90deg, #b3e0ff 0%, #fff 100%);
+  color: #0070f3;
+  box-shadow: 0 2px 12px rgba(0, 112, 243, 0.08);
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }

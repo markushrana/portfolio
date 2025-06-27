@@ -15,7 +15,7 @@
 .heading {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #0070f3;
+  color: black;
   margin-bottom: 24px;
   letter-spacing: 1px;
   text-align: center;
@@ -48,7 +48,7 @@
 
 .input:focus,
 .textarea:focus {
-  border: 1.5px solid #0070f3;
+  border: 1.5px solid gray;
   background: #f0f8ff;
 }
 
@@ -60,7 +60,7 @@
 .formButton {
   padding: 14px 0;
   font-size: 1.1rem;
-  background: linear-gradient(90deg, #0070f3 60%, #005fcc 100%);
+  background: linear-gradient(90deg, #6f86a0 60%, #4e565f 100%);
   color: #fff;
   border: none;
   border-radius: 8px;

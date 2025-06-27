@@ -74,7 +74,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 60%, #f9f9f9 100%);
+  background: linear-gradient(135deg, #b3e0ff 0%, #e0f7fa 60%, #f5fcff 100%);
   min-height: 100vh;
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   color: #222;
@@ -91,8 +91,8 @@ body::before {
   pointer-events: none;
   background: linear-gradient(
     120deg,
-    rgba(0, 112, 243, 0.03) 0%,
-    rgba(224, 231, 255, 0.08) 100%
+    rgba(0, 180, 255, 0.04) 0%,
+    rgba(120, 220, 255, 0.09) 100%
   );
   z-index: 0;
 }
@@ -104,9 +104,9 @@ body::before {
 }
 
 section {
-  background: linear-gradient(120deg, #f0f4ff 0%, #e0e7ff 100%);
+  background: linear-gradient(120deg, #e0f7fa 0%, #b3e0ff 100%);
   border-radius: 22px;
-  box-shadow: 0 6px 32px rgba(0, 112, 243, 0.1), 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 32px rgba(0, 112, 243, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
   margin-bottom: 2.5rem;
   scroll-margin-top: 80px;
 }
@@ -129,6 +129,14 @@ a {
 }
 a:hover {
   color: #005fcc;
+}
+
+.heading, .text, .subHeading, .strengthSection, .strengthText, .workSection, .workText, .contactSection, .contactText {
+  color: #111 !important;
+}
+
+.contactSection, .contactText {
+  color: #111 !important;
 }
 
 ::-webkit-scrollbar {

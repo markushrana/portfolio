@@ -1,6 +1,6 @@
 .footer {
-  background-color: #121212;
-  color: #ffffff;
+  background: linear-gradient(120deg, #b3e0ff 0%, #e0f7fa 100%);
+  color: #005fcc;
   padding: 3rem 1rem;
   display: flex;
   justify-content: center; /* Center the entire footer container */
@@ -32,13 +32,17 @@
 }
 
 .footerNav li a {
-  color: #ffffff;
+  color: #005fcc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footerNav li a:hover {
+.footerNav li a:hover, .footerNav li a:focus {
+  background: linear-gradient(90deg, #b3e0ff 0%, #fff 100%);
   color: #0070f3;
+  box-shadow: 0 2px 12px rgba(0,112,243,0.08);
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .socialIcons {
@@ -49,12 +53,16 @@
 }
 
 .socialIcons a {
-  color: #ffffff;
+  color: #005fcc;
   transition: color 0.3s ease;
 }
 
-.socialIcons a:hover {
+.socialIcons a:hover, .socialIcons a:focus {
+  background: linear-gradient(90deg, #b3e0ff 0%, #fff 100%);
   color: #0070f3;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0,112,243,0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .newsletterForm {
